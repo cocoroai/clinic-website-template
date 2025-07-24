@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブログ - さくらクリニック</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><img src="images/logo.png" alt="さくらクリニック ロゴ" onerror="this.innerHTML='🌸'" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                <div class="logo-text">
+                    <h1>さくらクリニック</h1>
+                    <p>地域に根ざした歯科・皮膚科医院</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="services.html">診療内容</a></li>
+                    <li><a href="profile.html">プロフィール</a></li>
+                    <li><a href="menu.html">メニュー・料金</a></li>
+                    <li><a href="blog.html" class="active">ブログ</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                    <li><a href="reservation.html" class="cta-button">Web予約</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1>📝 ブログ</h1>
+                <p>お知らせや健康に関するコラムをお届けします</p>
+            </div>
+        </section>
+
+        <!-- カテゴリータブ -->
+        <section class="blog-categories">
+            <div class="container">
+                <div class="category-tabs-modern">
+                    <button class="tab-button-modern active" data-category="all">
+                        <span class="tab-icon">📚</span>
+                        <span>すべて</span>
+                    </button>
+                    <button class="tab-button-modern" data-category="news">
+                        <span class="tab-icon">📢</span>
+                        <span>お知らせ</span>
+                    </button>
+                    <button class="tab-button-modern" data-category="dental">
+                        <span class="tab-icon">🦷</span>
+                        <span>歯科コラム</span>
+                    </button>
+                    <button class="tab-button-modern" data-category="dermatology">
+                        <span class="tab-icon">✨</span>
+                        <span>皮膚科コラム</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ブログ記事一覧 -->
+        <section class="blog-list-modern">
+            <div class="container">
+                <div class="blog-cards-grid">
+                    <!-- お知らせ記事 -->
+                    <article class="blog-card" data-category="news">
+                        <div class="blog-card-header news">
+                            <div class="blog-date">2024.07.20</div>
+                            <div class="blog-category-badge news">📢 お知らせ</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <h3>夏季休診のお知らせ</h3>
+                            <p>8月13日（火）〜8月16日（金）は夏季休診とさせていただきます。ご迷惑をおかけいたしますが、よろしくお願いいたします。急患の場合は...</p>
+                            <div class="blog-card-footer">
+                                <a href="#" class="read-more-btn">続きを読む →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 歯科コラム記事 -->
+                    <article class="blog-card" data-category="dental">
+                        <div class="blog-card-header dental">
+                            <div class="blog-date">2024.07.15</div>
+                            <div class="blog-category-badge dental">🦷 歯科コラム</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <h3>歯周病予防のための正しい歯磨き方法</h3>
+                            <p>歯周病は日本人の成人の約8割が罹患していると言われています。正しい歯磨き方法を身につけて、歯周病を予防しましょう。毎日の...</p>
+                            <div class="blog-card-footer">
+                                <a href="#" class="read-more-btn">続きを読む →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 皮膚科コラム記事 -->
+                    <article class="blog-card" data-category="dermatology">
+                        <div class="blog-card-header dermatology">
+                            <div class="blog-date">2024.07.10</div>
+                            <div class="blog-category-badge dermatology">✨ 皮膚科コラム</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <h3>夏の紫外線対策について</h3>
+                            <p>紫外線の強い季節になりました。シミやそばかすの原因となる紫外線から肌を守るための対策をご紹介します。日焼け止めの選び方から...</p>
+                            <div class="blog-card-footer">
+                                <a href="#" class="read-more-btn">続きを読む →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- お知らせ記事 -->
+                    <article class="blog-card" data-category="news">
+                        <div class="blog-card-header news">
+                            <div class="blog-date">2024.07.05</div>
+                            <div class="blog-category-badge news">📢 お知らせ</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <h3>Web予約システムの機能向上について</h3>
+                            <p>患者様により便利にご利用いただくため、Web予約システムの機能を向上いたしました。24時間いつでもご予約が可能です。新機能の...</p>
+                            <div class="blog-card-footer">
+                                <a href="#" class="read-more-btn">続きを読む →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 歯科コラム記事 -->
+                    <article class="blog-card" data-category="dental">
+                        <div class="blog-card-header dental">
+                            <div class="blog-date">2024.06.28</div>
+                            <div class="blog-category-badge dental">🦷 歯科コラム</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <h3>子どもの虫歯予防について</h3>
+                            <p>お子様の歯の健康は将来の歯並びや全身の健康に大きく影響します。虫歯予防のポイントをお伝えします。フッ素塗布やシーラントなど...</p>
+                            <div class="blog-card-footer">
+                                <a href="#" class="read-more-btn">続きを読む →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 皮膚科コラム記事 -->
+                    <article class="blog-card" data-category="dermatology">
+                        <div class="blog-card-header dermatology">
+                            <div class="blog-date">2024.06.20</div>
+                            <div class="blog-category-badge dermatology">✨ 皮膚科コラム</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <h3>アトピー性皮膚炎の最新治療について</h3>
+                            <p>アトピー性皮膚炎の治療は日々進歩しています。最新の治療法について解説いたします。生物学的製剤や外用薬の新しい選択肢など...</p>
+                            <div class="blog-card-footer">
+                                <a href="#" class="read-more-btn">続きを読む →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- お知らせ記事 -->
+                    <article class="blog-card" data-category="news">
+                        <div class="blog-card-header news">
+                            <div class="blog-date">2024.06.15</div>
+                            <div class="blog-category-badge news">📢 お知らせ</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <h3>新しい医療機器を導入いたしました</h3>
+                            <p>より精密で安全な診療を提供するため、最新の医療機器を導入いたしました。患者様により良い治療をご提供できます。デジタルレントゲンや...</p>
+                            <div class="blog-card-footer">
+                                <a href="#" class="read-more-btn">続きを読む →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 歯科コラム記事 -->
+                    <article class="blog-card" data-category="dental">
+                        <div class="blog-card-header dental">
+                            <div class="blog-date">2024.06.10</div>
+                            <div class="blog-category-badge dental">🦷 歯科コラム</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <h3>インプラント治療のメリットとデメリット</h3>
+                            <p>失った歯を補う治療法の一つであるインプラント。そのメリットとデメリットについて詳しく解説します。手術の流れや費用についても...</p>
+                            <div class="blog-card-footer">
+                                <a href="#" class="read-more-btn">続きを読む →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 皮膚科コラム記事 -->
+                    <article class="blog-card" data-category="dermatology">
+                        <div class="blog-card-header dermatology">
+                            <div class="blog-date">2024.06.05</div>
+                            <div class="blog-category-badge dermatology">✨ 皮膚科コラム</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <h3>ニキビの正しいケア方法</h3>
+                            <p>思春期から大人まで悩む方の多いニキビ。正しいケア方法を知って、美しい肌を保ちましょう。洗顔の仕方から化粧品の選び方まで...</p>
+                            <div class="blog-card-footer">
+                                <a href="#" class="read-more-btn">続きを読む →</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- ページネーション -->
+                <div class="pagination-modern">
+                    <a href="#" class="page-link-modern active">1</a>
+                    <a href="#" class="page-link-modern">2</a>
+                    <a href="#" class="page-link-modern">3</a>
+                    <a href="#" class="page-link-modern next">次へ →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- メールマガジン登録 -->
+        <section class="newsletter-modern" style="background: var(--background-light);">
+            <div class="container">
+                <div class="newsletter-card">
+                    <div class="newsletter-header">
+                        <div class="newsletter-icon">📧</div>
+                        <h2>メールマガジン登録</h2>
+                        <p>最新のお知らせや健康情報をお届けします</p>
+                    </div>
+                    <form class="newsletter-form-modern">
+                        <div class="form-input-group">
+                            <input type="email" placeholder="メールアドレスを入力してください" required>
+                            <button type="submit" class="newsletter-submit-btn">登録する</button>
+                        </div>
+                        <p class="newsletter-note">※配信停止はいつでも可能です</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🌸 さくらクリニック</h3>
+                    <p>〒123-4567 東京都○○区○○町1-2-3 さくらビル2F</p>
+                    <p>TEL: 03-1234-5678</p>
+                    <p>診療科目：歯科・皮膚科</p>
+                </div>
+                <div class="footer-section">
+                    <h3>診療時間</h3>
+                    <p>月・火・木・金：9:00-12:00 / 14:00-18:00</p>
+                    <p>土：9:00-12:00 / 14:00-17:00</p>
+                    <p>休診日：水曜・日曜・祝日</p>
+                </div>
+                <div class="footer-section">
+                    <h3>サイトマップ</h3>
+                    <ul>
+                        <li><a href="services.html">診療内容</a></li>
+                        <li><a href="profile.html">プロフィール</a></li>
+                        <li><a href="menu.html">メニュー・料金</a></li>
+                        <li><a href="blog.html">ブログ</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2024 さくらクリニック. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link">📧</a>
+                    <a href="#" class="social-link">📞</a>
+                    <a href="#" class="social-link">📍</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

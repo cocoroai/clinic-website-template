@@ -1,0 +1,22 @@
+# 画像ファイルについて
+
+以下の画像ファイルを準備してください：
+
+## スタッフ写真
+- doctor1.jpg - 院長の写真 (200x200px推奨)
+- doctor2.jpg - 副院長の写真 (200x200px推奨)
+- staff1.jpg - 歯科衛生士の写真 (150x150px推奨)
+- staff2.jpg - 看護師の写真 (150x150px推奨)
+- staff3.jpg - 受付スタッフの写真 (150x150px推奨)
+- staff4.jpg - 歯科助手の写真 (150x150px推奨)
+
+## その他
+画像が準備できるまでは、HTMLで指定されているパスに適切な画像を配置してください。
+画像のサイズは上記の推奨サイズを参考にしてください。
+
+## 代替案
+画像が用意できない場合は、以下のようなプレースホルダーサービスを利用できます：
+- https://via.placeholder.com/200x200/2c5aa0/ffffff?text=Doctor
+- https://via.placeholder.com/150x150/2c5aa0/ffffff?text=Staff
+
+これらのURLをHTMLのsrc属性に直接指定することも可能です。

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ - さくらクリニック</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><img src="images/logo.png" alt="さくらクリニック ロゴ" onerror="this.innerHTML='🌸'" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                <div class="logo-text">
+                    <h1>さくらクリニック</h1>
+                    <p>地域に根ざした歯科・皮膚科医院</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="services.html">診療内容</a></li>
+                    <li><a href="profile.html">プロフィール</a></li>
+                    <li><a href="menu.html">メニュー・料金</a></li>
+                    <li><a href="blog.html">ブログ</a></li>
+                    <li><a href="contact.html" class="active">お問い合わせ</a></li>
+                    <li><a href="reservation.html" class="cta-button">Web予約</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1>📞 お問い合わせ</h1>
+                <p>ご予約・ご相談は下記よりお気軽にお問い合わせください</p>
+            </div>
+        </section>
+
+        <!-- お問い合わせ方法 -->
+        <section class="contact-methods-modern">
+            <div class="container">
+                <div class="contact-methods-grid">
+                    <!-- 電話でのお問い合わせ -->
+                    <div class="contact-method-card phone">
+                        <div class="method-header">
+                            <div class="method-icon">📞</div>
+                            <h3>お電話でのご予約・お問い合わせ</h3>
+                        </div>
+                        <div class="phone-display">
+                            <a href="tel:03-1234-5678" class="phone-number">03-1234-5678</a>
+                        </div>
+                        <div class="contact-hours-card">
+                            <h4>📅 受付時間</h4>
+                            <div class="hours-list">
+                                <div class="hours-item">
+                                    <span class="days">月・火・木・金</span>
+                                    <span class="time">9:00-12:00 / 14:00-18:00</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span class="days">土</span>
+                                    <span class="time">9:00-12:00 / 14:00-17:00</span>
+                                </div>
+                                <div class="hours-item closed">
+                                    <span class="days">休診日</span>
+                                    <span class="time">水曜・日曜・祝日</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Web予約 -->
+                    <div class="contact-method-card web">
+                        <div class="method-header">
+                            <div class="method-icon">💻</a>
+                            <h3>Web予約</h3>
+                        </div>
+                        <div class="web-reservation-content">
+                            <div class="feature-list">
+                                <div class="feature-item">
+                                    <span class="feature-icon">🕐</span>
+                                    <span>24時間いつでもご予約が可能です</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">📱</span>
+                                    <span>スマートフォンから簡単予約</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">📧</span>
+                                    <span>予約確認メールをお送りします</span>
+                                </div>
+                            </div>
+                            <a href="reservation.html" class="web-reservation-btn">Web予約はこちら</a>
+                            <p class="reservation-note">※初診の方は事前にお電話でご相談ください</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お問い合わせフォーム -->
+        <section class="contact-form-section-modern" style="background: var(--background-light);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>📝 お問い合わせフォーム</h2>
+                    <p>ご質問やご相談がございましたら、下記フォームよりお気軽にお問い合わせください</p>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form-modern">
+                        <div class="form-section-modern">
+                            <h3 class="form-section-title-modern">お問い合わせ内容</h3>
+                            <div class="form-grid-modern">
+                                <div class="form-group-modern">
+                                    <label for="inquiry-type">お問い合わせ種類 <span class="required-modern">*</span></label>
+                                    <select id="inquiry-type" name="inquiry-type" class="form-select-modern" required>
+                                        <option value="">選択してください</option>
+                                        <option value="reservation">ご予約について</option>
+                                        <option value="treatment">治療について</option>
+                                        <option value="fee">料金について</option>
+                                        <option value="other">その他</option>
+                                    </select>
+                                </div>
+                                <div class="form-group-modern">
+                                    <label for="department">診療科目</label>
+                                    <select id="department" name="department" class="form-select-modern">
+                                        <option value="">選択してください</option>
+                                        <option value="dental">歯科</option>
+                                        <option value="dermatology">皮膚科</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section-modern">
+                            <h3 class="form-section-title-modern">お客様情報</h3>
+                            <div class="form-grid-modern">
+                                <div class="form-group-modern">
+                                    <label for="name">お名前 <span class="required-modern">*</span></label>
+                                    <input type="text" id="name" name="name" class="form-input-modern" required>
+                                </div>
+                                <div class="form-group-modern">
+                                    <label for="name-kana">フリガナ</label>
+                                    <input type="text" id="name-kana" name="name-kana" class="form-input-modern">
+                                </div>
+                            </div>
+                            <div class="form-grid-modern">
+                                <div class="form-group-modern">
+                                    <label for="age">年齢</label>
+                                    <input type="number" id="age" name="age" class="form-input-modern" min="0" max="120">
+                                </div>
+                                <div class="form-group-modern">
+                                    <label for="gender">性別</label>
+                                    <select id="gender" name="gender" class="form-select-modern">
+                                        <option value="">選択してください</option>
+                                        <option value="male">男性</option>
+                                        <option value="female">女性</option>
+                                        <option value="other">その他</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-grid-modern">
+                                <div class="form-group-modern">
+                                    <label for="phone">電話番号 <span class="required-modern">*</span></label>
+                                    <input type="tel" id="phone" name="phone" class="form-input-modern" required>
+                                </div>
+                                <div class="form-group-modern">
+                                    <label for="email">メールアドレス <span class="required-modern">*</span></label>
+                                    <input type="email" id="email" name="email" class="form-input-modern" required>
+                                </div>
+                            </div>
+                            <div class="form-group-modern">
+                                <label for="preferred-date">希望日時</label>
+                                <input type="datetime-local" id="preferred-date" name="preferred-date" class="form-input-modern">
+                            </div>
+                        </div>
+
+                        <div class="form-section-modern">
+                            <h3 class="form-section-title-modern">詳細内容</h3>
+                            <div class="form-group-modern">
+                                <label for="message">お問い合わせ内容 <span class="required-modern">*</span></label>
+                                <textarea id="message" name="message" rows="6" class="form-textarea-modern" required placeholder="症状やご質問などを詳しくお書きください"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-section-modern">
+                            <div class="checkbox-group-modern">
+                                <label class="checkbox-label-modern">
+                                    <input type="checkbox" name="privacy" required>
+                                    <span class="checkmark"></span>
+                                    <a href="#privacy-modal" class="privacy-link">個人情報の取り扱い</a>に同意します <span class="required-modern">*</span>
+                                </label>
+                            </div>
+                            <p class="privacy-note">※ご入力いただいた個人情報は、お問い合わせへの対応のみに使用し、それ以外の目的では使用いたしません。</p>
+                        </div>
+
+                        <div class="form-submit-modern">
+                            <button type="submit" class="contact-submit-btn">送信する</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- クリニック情報 -->
+        <section class="clinic-info-modern">
+            <div class="container">
+                <div class="clinic-info-grid">
+                    <!-- クリニック詳細 -->
+                    <div class="clinic-details-card">
+                        <div class="card-header-modern">
+                            <div class="header-icon">🏥</a>
+                            <h2>クリニック情報</h2>
+                        </div>
+                        <div class="details-list">
+                            <div class="detail-item-modern">
+                                <div class="detail-icon">🌸</a>
+                                <div class="detail-content">
+                                    <strong>クリニック名</strong>
+                                    <p>さくらクリニック</p>
+                                </div>
+                            </div>
+                            <div class="detail-item-modern">
+                                <div class="detail-icon">📍</a>
+                                <div class="detail-content">
+                                    <strong>住所</strong>
+                                    <p>〒123-4567<br>東京都○○区○○町1-2-3 さくらビル2F</p>
+                                </div>
+                            </div>
+                            <div class="detail-item-modern">
+                                <div class="detail-icon">📞</a>
+                                <div class="detail-content">
+                                    <strong>電話番号</strong>
+                                    <p>03-1234-5678</p>
+                                </div>
+                            </div>
+                            <div class="detail-item-modern">
+                                <div class="detail-icon">🚶</a>
+                                <div class="detail-content">
+                                    <strong>アクセス</strong>
+                                    <p>○○駅から徒歩5分<br>駐車場3台完備</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- アクセスマップ -->
+                    <div class="map-card-modern">
+                        <div class="card-header-modern">
+                            <div class="header-icon">🗺️</a>
+                            <h2>アクセスマップ</h2>
+                        </div>
+                        <div class="map-container-modern">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.8280692264273!2d139.69171631525343!3d35.68946538019441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d2059b7fd3b%3A0xec61c68fe232e4!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1635825234567!5m2!1sja!2sjp" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <div class="map-info">
+                            <p>📍 最寄り駅：○○駅 徒歩5分</p>
+                            <p>🚗 駐車場：3台完備（無料）</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 緊急時情報 -->
+        <section class="emergency-info-modern" style="background: var(--background-light);">
+            <div class="container">
+                <div class="emergency-card">
+                    <div class="emergency-header">
+                        <div class="emergency-icon">🚨</a>
+                        <h2>緊急時・急患について</h2>
+                    </div>
+                    <div class="emergency-content">
+                        <p>歯の痛みや皮膚のトラブルなど、急な症状でお困りの際はお電話にてご相談ください。</p>
+                        <div class="emergency-contact-card">
+                            <div class="emergency-phone-display">
+                                <a href="tel:03-1234-5678" class="emergency-phone">📞 03-1234-5678</a>
+                            </div>
+                            <p class="emergency-note">診療時間外でも可能な限り対応いたします</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- プライバシーポリシーモーダル -->
+        <div id="privacy-modal" class="modal-modern">
+            <div class="modal-content-modern">
+                <div class="modal-header">
+                    <h2>🔒 個人情報の取り扱いについて</h2>
+                    <span class="close-modern">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="policy-section">
+                        <h3>個人情報保護方針</h3>
+                        <p>さくらクリニックでは、患者様の個人情報を適切に管理し、以下の目的でのみ使用いたします。</p>
+                    </div>
+                    
+                    <div class="policy-section">
+                        <h4>利用目的</h4>
+                        <ul class="policy-list">
+                            <li>診療・治療のため</li>
+                            <li>診療予約の管理のため</li>
+                            <li>お問い合わせへの回答のため</li>
+                            <li>診療に関するご案内のため</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="policy-section">
+                        <h4>第三者への提供</h4>
+                        <p>法令に基づく場合を除き、患者様の同意なく第三者に個人情報を提供することはありません。</p>
+                    </div>
+                    
+                    <div class="policy-section">
+                        <h4>お問い合わせ</h4>
+                        <p>個人情報の取り扱いに関するお問い合わせは、当クリニックまでご連絡ください。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🌸 さくらクリニック</h3>
+                    <p>〒123-4567 東京都○○区○○町1-2-3 さくらビル2F</p>
+                    <p>TEL: 03-1234-5678</p>
+                    <p>診療科目：歯科・皮膚科</p>
+                </div>
+                <div class="footer-section">
+                    <h3>診療時間</h3>
+                    <p>月・火・木・金：9:00-12:00 / 14:00-18:00</p>
+                    <p>土：9:00-12:00 / 14:00-17:00</p>
+                    <p>休診日：水曜・日曜・祝日</p>
+                </div>
+                <div class="footer-section">
+                    <h3>サイトマップ</h3>
+                    <ul>
+                        <li><a href="services.html">診療内容</a></li>
+                        <li><a href="profile.html">プロフィール</a></li>
+                        <li><a href="menu.html">メニュー・料金</a></li>
+                        <li><a href="blog.html">ブログ</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-divider"></a>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2024 さくらクリニック. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link">📧</a>
+                    <a href="#" class="social-link">📞</a>
+                    <a href="#" class="social-link">📍</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

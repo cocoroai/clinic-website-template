@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プロフィール - さくらクリニック</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><img src="images/logo.png" alt="さくらクリニック ロゴ" onerror="this.innerHTML='🌸'" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                <div class="logo-text">
+                    <h1>さくらクリニック</h1>
+                    <p>地域に根ざした歯科・皮膚科医院</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="services.html">診療内容</a></li>
+                    <li><a href="profile.html" class="active">プロフィール</a></li>
+                    <li><a href="menu.html">メニュー・料金</a></li>
+                    <li><a href="blog.html">ブログ</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                    <li><a href="reservation.html" class="cta-button">Web予約</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1>👨‍⚕️ プロフィール</h1>
+                <p>経験豊富な医師・スタッフが皆様の健康をサポートします</p>
+            </div>
+        </section>
+
+        <!-- クリニックの理念 -->
+        <section class="clinic-philosophy">
+            <div class="container">
+                <div class="section-header">
+                    <h2>🌸 クリニックの理念</h2>
+                    <p>地域の皆様に信頼される医療機関を目指しています</p>
+                </div>
+                <div class="philosophy-grid">
+                    <div class="philosophy-card">
+                        <div class="philosophy-icon">❤️</a>
+                        <h3>患者様中心の医療</h3>
+                        <p>患者様のお気持ちに寄り添い、十分な説明とご納得をいただいた上で治療を進めます。</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <div class="philosophy-icon">⚡</a>
+                        <h3>最新の医療技術</h3>
+                        <p>常に最新の医療技術と設備を導入し、より良い治療を提供いたします。</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <div class="philosophy-icon">🏘️</a>
+                        <h3>地域貢献</h3>
+                        <p>地域の健康づくりに貢献し、皆様の生活の質の向上をサポートします。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 医師紹介 -->
+        <section id="doctors" class="doctors-profile" style="background: var(--background-light);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>👨‍⚕️ 医師紹介</h2>
+                    <p>専門性の高い医師が、それぞれの分野で最適な治療をご提供します</p>
+                </div>
+                <div class="doctors-grid">
+                    <!-- 院長 田中太郎 -->
+                    <div id="tanaka" class="doctor-profile-card">
+                        <div class="doctor-header">
+                            <div class="doctor-avatar">
+                                <img src="images/tanaka-doctor.jpg" alt="院長 田中太郎" onerror="this.src='https://via.placeholder.com/150x150/F8BBD9/ffffff?text=👨‍⚕️'">
+                            </div>
+                            <div class="doctor-title">
+                                <h3>院長 田中 太郎</h3>
+                                <p class="specialty">歯科医師・歯学博士</p>
+                                <div class="experience-badge">経験20年以上</a>
+                            </div>
+                        </div>
+                        
+                        <div class="doctor-content">
+                            <div class="credentials-section">
+                                <h4>🎓 経歴</h4>
+                                <div class="timeline-list">
+                                    <div class="timeline-item">
+                                        <span class="year">1995年</span>
+                                        <span class="event">東京歯科大学 歯学部卒業</span>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="year">1995年〜1998年</span>
+                                        <span class="event">東京歯科大学附属病院 研修医</span>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="year">1998年〜2005年</span>
+                                        <span class="event">都内歯科医院 勤務医</span>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="year">2005年</span>
+                                        <span class="event">さくらクリニック 開院</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="certifications-section">
+                                <h4>🏆 資格・所属学会</h4>
+                                <div class="badges-grid">
+                                    <span class="certification-badge">歯科医師免許</span>
+                                    <span class="certification-badge">日本歯科医師会 会員</span>
+                                    <span class="certification-badge">日本歯周病学会 専門医</span>
+                                    <span class="certification-badge">日本口腔インプラント学会 会員</span>
+                                </div>
+                            </div>
+                            
+                            <div class="message-section">
+                                <h4>💬 患者様へのメッセージ</h4>
+                                <div class="message-box">
+                                    <p>20年以上の豊富な経験を活かし、患者様に最適な治療をご提供いたします。歯の健康は全身の健康につながります。些細なことでもお気軽にご相談ください。痛みの少ない治療を心がけ、患者様がリラックスして治療を受けられる環境づくりに努めています。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 副院長 佐藤花子 -->
+                    <div id="sato" class="doctor-profile-card">
+                        <div class="doctor-header">
+                            <div class="doctor-avatar">
+                                <img src="images/sato-doctor.jpg" alt="副院長 佐藤花子" onerror="this.src='https://via.placeholder.com/150x150/F8BBD9/ffffff?text=👩‍⚕️'">
+                            </div>
+                            <div class="doctor-title">
+                                <h3>副院長 佐藤 花子</h3>
+                                <p class="specialty">皮膚科医師・医学博士</p>
+                                <div class="experience-badge">皮膚科専門医</a>
+                            </div>
+                        </div>
+                        
+                        <div class="doctor-content">
+                            <div class="credentials-section">
+                                <h4>🎓 経歴</h4>
+                                <div class="timeline-list">
+                                    <div class="timeline-item">
+                                        <span class="year">2000年</span>
+                                        <span class="event">慶應義塾大学 医学部卒業</span>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="year">2000年〜2002年</span>
+                                        <span class="event">慶應義塾大学病院 研修医</span>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="year">2002年〜2010年</span>
+                                        <span class="event">都内総合病院 皮膚科勤務</span>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="year">2010年</span>
+                                        <span class="event">さくらクリニック 副院長就任</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="certifications-section">
+                                <h4>🏆 資格・所属学会</h4>
+                                <div class="badges-grid">
+                                    <span class="certification-badge">医師免許</span>
+                                    <span class="certification-badge">皮膚科専門医</span>
+                                    <span class="certification-badge">日本皮膚科学会 会員</span>
+                                    <span class="certification-badge">日本小児皮膚科学会 会員</span>
+                                    <span class="certification-badge">日本アレルギー学会 会員</span>
+                                </div>
+                            </div>
+                            
+                            <div class="message-section">
+                                <h4>💬 患者様へのメッセージ</h4>
+                                <div class="message-box">
+                                    <p>皮膚は体の表面にあるため、症状が目に見えやすく、患者様にとって大きなお悩みとなることがあります。お子様からご高齢の方まで、年齢や症状に応じた適切な治療をご提案いたします。些細な症状でも遠慮なくご相談ください。丁寧な診察と分かりやすい説明を心がけています。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- クリニック施設 -->
+        <section class="clinic-facilities" style="background: var(--background-light);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>🏥 クリニック施設</h2>
+                    <p>清潔で快適な環境で、安心して治療をお受けいただけます</p>
+                </div>
+                <div class="facility-grid">
+                    <div class="facility-card">
+                        <div class="facility-image">
+                            <img src="images/exterior.jpg" alt="クリニック外観" onerror="this.src='https://via.placeholder.com/400x300/F8BBD9/ffffff?text=🏥+外観'">
+                        </div>
+                        <div class="facility-info">
+                            <h3>🏢 クリニック外観</h3>
+                            <p>さくらビル2階に位置し、駅から徒歩5分の好立地。駐車場も完備しております。</p>
+                        </div>
+                    </div>
+                    <div class="facility-card">
+                        <div class="facility-image">
+                            <img src="images/entrance.jpg" alt="エントランス" onerror="this.src='https://via.placeholder.com/400x300/FFB6C1/ffffff?text=🚪+エントランス'">
+                        </div>
+                        <div class="facility-info">
+                            <h3>🚪 エントランス</h3>
+                            <p>明るく開放的なエントランスで、患者様をお迎えいたします。</p>
+                        </div>
+                    </div>
+                    <div class="facility-card">
+                        <div class="facility-image">
+                            <img src="images/reception.jpg" alt="受付" onerror="this.src='https://via.placeholder.com/400x300/FCE4EC/ffffff?text=🏢+受付'">
+                        </div>
+                        <div class="facility-info">
+                            <h3>🏢 受付</h3>
+                            <p>笑顔のスタッフがお迎えし、丁寧な対応でサポートいたします。</p>
+                        </div>
+                    </div>
+                    <div class="facility-card">
+                        <div class="facility-image">
+                            <img src="images/waiting-room.jpg" alt="待合室" onerror="this.src='https://via.placeholder.com/400x300/FFF0F3/ffffff?text=🪑+待合室'">
+                        </div>
+                        <div class="facility-info">
+                            <h3>🪑 待合室</h3>
+                            <p>ゆったりとした空間でリラックスしてお待ちいただけます。</p>
+                        </div>
+                    </div>
+                    <div class="facility-card">
+                        <div class="facility-image">
+                            <img src="images/consultation-room1.jpg" alt="歯科診察室" onerror="this.src='https://via.placeholder.com/400x300/F8BBD9/ffffff?text=🦷+歯科診察室'">
+                        </div>
+                        <div class="facility-info">
+                            <h3>🦷 歯科診察室</h3>
+                            <p>最新の歯科機器を完備し、精密で安全な治療を提供いたします。</p>
+                        </div>
+                    </div>
+                    <div class="facility-card">
+                        <div class="facility-image">
+                            <img src="images/consultation-room2.jpg" alt="皮膚科診察室" onerror="this.src='https://via.placeholder.com/400x300/FFB6C1/ffffff?text=✨+皮膚科診察室'">
+                        </div>
+                        <div class="facility-info">
+                            <h3>✨ 皮膚科診察室</h3>
+                            <p>プライバシーに配慮した個室で、安心して診察をお受けいただけます。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- スタッフ紹介 -->
+        <section class="staff-introduction">
+            <div class="container">
+                <div class="section-header">
+                    <h2>👥 スタッフ紹介</h2>
+                    <p>チーム一丸となって、患者様をサポートいたします</p>
+                </div>
+                <div class="staff-cards-grid">
+                    <div class="staff-profile-card">
+                        <div class="staff-avatar">
+                            <img src="images/hygienist.jpg" alt="歯科衛生士 山田美穂" onerror="this.src='https://via.placeholder.com/120x120/FFB6C1/ffffff?text=👩‍💼'">
+                        </div>
+                        <div class="staff-details">
+                            <h3>山田 美穂</h3>
+                            <p class="staff-role">歯科衛生士（主任）</p>
+                            <p class="staff-description">15年の経験を持つベテラン歯科衛生士です。予防歯科と患者様のケアを担当しています。</p>
+                        </div>
+                    </div>
+                    <div class="staff-profile-card">
+                        <div class="staff-avatar">
+                            <img src="images/nurse2.jpg" alt="看護師 鈴木良子" onerror="this.src='https://via.placeholder.com/120x120/FFB6C1/ffffff?text=👩‍⚕️'">
+                        </div>
+                        <div class="staff-details">
+                            <h3>鈴木 良子</h3>
+                            <p class="staff-role">看護師</p>
+                            <p class="staff-description">皮膚科診療のサポートを行っています。患者様に安心していただけるよう心がけています。</p>
+                        </div>
+                    </div>
+                    <div class="staff-profile-card">
+                        <div class="staff-avatar">
+                            <img src="images/receptionist.jpg" alt="受付 高橋さくら" onerror="this.src='https://via.placeholder.com/120x120/FFB6C1/ffffff?text=👩‍💻'">
+                        </div>
+                        <div class="staff-details">
+                            <h3>高橋 さくら</h3>
+                            <p class="staff-role">受付・事務</p>
+                            <p class="staff-description">患者様との最初の接点として、笑顔でお迎えし、丁寧な対応を心がけています。</p>
+                        </div>
+                    </div>
+                    <div class="staff-profile-card">
+                        <div class="staff-avatar">
+                            <img src="images/dental-assistant.jpg" alt="歯科助手 中村花音" onerror="this.src='https://via.placeholder.com/120x120/FFB6C1/ffffff?text=👩‍🔧'">
+                        </div>
+                        <div class="staff-details">
+                            <h3>中村 花音</h3>
+                            <p class="staff-role">歯科助手</p>
+                            <p class="staff-description">治療のアシスタントと院内の清掃・消毒を担当し、安全で清潔な環境作りに努めています。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- クリニックの歩み -->
+        <section class="clinic-history" style="background: var(--background-light);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>📈 クリニックの歩み</h2>
+                    <p>2005年の開院から現在まで、地域医療に貢献し続けています</p>
+                </div>
+                <div class="history-timeline">
+                    <div class="timeline-card">
+                        <div class="timeline-year">2005年</a>
+                        <div class="timeline-content">
+                            <h3>🏥 さくらクリニック開院</h3>
+                            <p>歯科診療から始まり、地域医療の第一歩を踏み出しました</p>
+                        </div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-year">2008年</a>
+                        <div class="timeline-content">
+                            <h3>🔧 院内リニューアル</h3>
+                            <p>最新医療機器を導入し、より質の高い診療環境を整備</p>
+                        </div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-year">2010年</a>
+                        <div class="timeline-content">
+                            <h3>✨ 皮膚科診療開始</h3>
+                            <p>副院長就任により、皮膚科診療を開始し診療科目を拡大</p>
+                        </div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-year">2015年</a>
+                        <div class="timeline-content">
+                            <h3>💻 Web予約システム導入</h3>
+                            <p>患者様の利便性向上のため、24時間予約システムを導入</p>
+                        </div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-year">2020年</a>
+                        <div class="timeline-content">
+                            <h3>🛡️ 感染症対策設備強化</h3>
+                            <p>安心・安全な診療環境のため、感染症対策を徹底強化</p>
+                        </div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-year">2024年</a>
+                        <div class="timeline-content">
+                            <h3>🎉 開院19周年</h3>
+                            <p>地域の皆様に支えられ、19周年を迎えました</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🌸 さくらクリニック</h3>
+                    <p>〒123-4567 東京都○○区○○町1-2-3 さくらビル2F</p>
+                    <p>TEL: 03-1234-5678</p>
+                    <p>診療科目：歯科・皮膚科</p>
+                </div>
+                <div class="footer-section">
+                    <h3>診療時間</h3>
+                    <p>月・火・木・金：9:00-12:00 / 14:00-18:00</p>
+                    <p>土：9:00-12:00 / 14:00-17:00</p>
+                    <p>休診日：水曜・日曜・祝日</p>
+                </div>
+                <div class="footer-section">
+                    <h3>サイトマップ</h3>
+                    <ul>
+                        <li><a href="services.html">診療内容</a></li>
+                        <li><a href="profile.html">プロフィール</a></li>
+                        <li><a href="menu.html">メニュー・料金</a></li>
+                        <li><a href="blog.html">ブログ</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-divider"></a>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2024 さくらクリニック. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link">📧</a>
+                    <a href="#" class="social-link">📞</a>
+                    <a href="#" class="social-link">📍</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

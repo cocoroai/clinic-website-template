@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web予約 - さくらクリニック</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><img src="images/logo.png" alt="さくらクリニック ロゴ" onerror="this.innerHTML='🌸'" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                <div class="logo-text">
+                    <h1>さくらクリニック</h1>
+                    <p>地域に根ざした歯科・皮膚科医院</p>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="services.html">診療内容</a></li>
+                    <li><a href="profile.html">プロフィール</a></li>
+                    <li><a href="menu.html">メニュー・料金</a></li>
+                    <li><a href="blog.html">ブログ</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                    <li><a href="reservation.html" class="active">Web予約</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1>💻 Web予約</h1>
+                <p>24時間いつでもご予約が可能です</p>
+            </div>
+        </section>
+
+        <section class="reservation-section">
+            <div class="container">
+                <div class="reservation-container">
+                    <div class="reservation-header">
+                        <h2>🌸 ご予約フォーム</h2>
+                        <p>Web予約はこちらから<br>※初診の方は事前にお電話でご相談ください</p>
+                    </div>
+
+                    <form class="reservation-form" id="reservationForm">
+                        <!-- 患者情報 -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">患者様情報</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label class="form-label" for="lastName">お名前（姓）<span class="required">*</span></label>
+                                    <input type="text" id="lastName" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="firstName">お名前（名）<span class="required">*</span></label>
+                                    <input type="text" id="firstName" class="form-input" required>
+                                </div>
+                            </div>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label class="form-label" for="lastNameKana">フリガナ（セイ）<span class="required">*</span></label>
+                                    <input type="text" id="lastNameKana" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="firstNameKana">フリガナ（メイ）<span class="required">*</span></label>
+                                    <input type="text" id="firstNameKana" class="form-input" required>
+                                </div>
+                            </div>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label class="form-label" for="phone">電話番号<span class="required">*</span></label>
+                                    <input type="tel" id="phone" class="form-input" placeholder="03-1234-5678" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="email">メールアドレス<span class="required">*</span></label>
+                                    <input type="email" id="email" class="form-input" required>
+                                </div>
+                            </div>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label class="form-label" for="age">年齢</label>
+                                    <input type="number" id="age" class="form-input" min="0" max="120">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="gender">性別</label>
+                                    <select id="gender" class="form-select">
+                                        <option value="">選択してください</option>
+                                        <option value="male">男性</option>
+                                        <option value="female">女性</option>
+                                        <option value="other">その他</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 診療内容 -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">診療について</h3>
+                            <div class="form-group">
+                                <label class="form-label" for="department">診療科目<span class="required">*</span></label>
+                                <select id="department" class="form-select" required>
+                                    <option value="">選択してください</option>
+                                    <option value="dental">歯科</option>
+                                    <option value="dermatology">皮膚科</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="visitType">受診区分<span class="required">*</span></label>
+                                <select id="visitType" class="form-select" required>
+                                    <option value="">選択してください</option>
+                                    <option value="first">初診</option>
+                                    <option value="return">再診</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="symptoms">症状・ご相談内容</label>
+                                <textarea id="symptoms" class="form-textarea" placeholder="症状やご相談したい内容をお聞かせください"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- 日時選択 -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">希望日時の選択</h3>
+                            <div class="form-group">
+                                <label class="form-label">希望日<span class="required">*</span></label>
+                                <div class="calendar-container">
+                                    <div class="calendar-header">
+                                        <button type="button" class="calendar-nav" id="prevMonth">‹</button>
+                                        <div class="calendar-month" id="currentMonth"></div>
+                                        <button type="button" class="calendar-nav" id="nextMonth">›</button>
+                                    </div>
+                                    <div class="calendar-grid" id="calendarGrid">
+                                        <!-- Calendar content will be generated by JavaScript -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">希望時間<span class="required">*</span></label>
+                                <div class="time-slots" id="timeSlots"></div>
+                            </div>
+                        </div>
+
+                        <!-- その他 -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">その他</h3>
+                            <div class="form-group">
+                                <label class="form-label" for="requests">ご要望・備考</label>
+                                <textarea id="requests" class="form-textarea" placeholder="その他ご要望やご質問がございましたらお聞かせください"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" id="agreement" required>
+                                    <a href="#privacy-modal" style="color: var(--primary-dark); text-decoration: underline;">個人情報の取り扱い</a>に同意します<span class="required">*</span>
+                                </label>
+                                <p class="privacy-note">※ご入力いただいた個人情報は、診療予約および診療のみに使用し、それ以外の目的では使用いたしません。</p>
+                            </div>
+                        </div>
+
+                        <div class="form-submit">
+                            <button type="submit" class="form-submit-btn">予約を申し込む</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🌸 さくらクリニック</h3>
+                    <p>〒123-4567 東京都○○区○○町1-2-3 さくらビル2F</p>
+                    <p>TEL: 03-1234-5678</p>
+                    <p>診療科目：歯科・皮膚科</p>
+                </div>
+                <div class="footer-section">
+                    <h3>診療時間</h3>
+                    <p>月・火・木・金：9:00-12:00 / 14:00-18:00</p>
+                    <p>土：9:00-12:00 / 14:00-17:00</p>
+                    <p>休診日：水曜・日曜・祝日</p>
+                </div>
+                <div class="footer-section">
+                    <h3>サイトマップ</h3>
+                    <ul>
+                        <li><a href="services.html">診療内容</a></li>
+                        <li><a href="profile.html">プロフィール</a></li>
+                        <li><a href="menu.html">メニュー・料金</a></li>
+                        <li><a href="blog.html">ブログ</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2024 さくらクリニック. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link">📧</a>
+                    <a href="#" class="social-link">📞</a>
+                    <a href="#" class="social-link">📍</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- プライバシーポリシーモーダル -->
+    <div id="privacy-modal" class="modal-modern">
+        <div class="modal-content-modern">
+            <div class="modal-header">
+                <h2>🔒 個人情報の取り扱いについて</h2>
+                <span class="close-modern">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="policy-section">
+                    <h3>個人情報保護方針</h3>
+                    <p>さくらクリニックでは、患者様の個人情報を適切に管理し、以下の目的でのみ使用いたします。</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h4>利用目的</h4>
+                    <ul class="policy-list">
+                        <li>診療・治療のため</li>
+                        <li>診療予約の管理のため</li>
+                        <li>お問い合わせへの回答のため</li>
+                        <li>診療に関するご案内のため</li>
+                    </ul>
+                </div>
+                
+                <div class="policy-section">
+                    <h4>第三者への提供</h4>
+                    <p>法令に基づく場合を除き、患者様の同意なく第三者に個人情報を提供することはありません。</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h4>お問い合わせ</h4>
+                    <p>個人情報の取り扱いに関するお問い合わせは、当クリニックまでご連絡ください。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/reservation.js"></script>
+</body>
+</html>
