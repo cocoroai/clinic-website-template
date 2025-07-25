@@ -1,3 +1,38 @@
+// Sanitize function to prevent XSS attacks
+function sanitize(str) {
+    if (typeof str !== 'string') return '';
+    const map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#x27;',
+        '/': '&#x2F;',
+        '`': '&#x60;',
+        '=': '&#x3D;'
+    };
+    const reg = /[&<>"'/`=]/ig;
+    return str.replace(reg, (match) => (map[match]));
+}
+
+// Input validation functions
+function validatePhone(phone) {
+    // Japanese phone number format: XXX-XXXX-XXXX or XXXX-XX-XXXX
+    const phoneRegex = /^0\d{1,4}-\d{1,4}-\d{4}$|^0\d{9,10}$/;
+    return phoneRegex.test(phone.replace(/[^\d-]/g, ''));
+}
+
+function validateKatakana(str) {
+    // Katakana characters and some common symbols
+    const katakanaRegex = /^[ァ-ヶー\s]+$/;
+    return katakanaRegex.test(str);
+}
+
+function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
 // Reservation Calendar and Form Functionality
 document.addEventListener('DOMContentLoaded', function() {
     let currentDate = new Date();
@@ -180,10 +215,11 @@ document.addEventListener('DOMContentLoaded', function() {
             slot.classList.remove('disabled');
             const time = slot.textContent;
             
-            // Disable Saturday afternoon slots after 17:00
+            // Disable Saturday afternoon slots after 17:00 (17:00 is available)
             if (dayOfWeek === 6) {
                 const hour = parseInt(time.split(':')[0]);
-                if (hour >= 17) {
+                const minute = parseInt(time.split(':')[1]);
+                if (hour > 17 || (hour === 17 && minute > 0)) {
                     slot.classList.add('disabled');
                 }
             }
@@ -280,6 +316,27 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
+        // Validate input formats
+        if (!validateKatakana(reservationData.lastNameKana)) {
+            alert('フリガナ（セイ）はカタカナで入力してください。');
+            return;
+        }
+        
+        if (!validateKatakana(reservationData.firstNameKana)) {
+            alert('フリガナ（メイ）はカタカナで入力してください。');
+            return;
+        }
+        
+        if (!validatePhone(reservationData.phone)) {
+            alert('電話番号の形式が正しくありません。\n例: 03-1234-5678');
+            return;
+        }
+        
+        if (!validateEmail(reservationData.email)) {
+            alert('メールアドレスの形式が正しくありません。');
+            return;
+        }
+        
         // Check agreement checkbox
         if (!document.getElementById('agreement').checked) {
             alert('個人情報の取り扱いに同意してください。');
@@ -294,7 +351,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Simulate form submission
         setTimeout(() => {
-            alert(`予約を受け付けました。\n\n【予約内容】\nお名前: ${reservationData.lastName} ${reservationData.firstName}様\n診療科: ${reservationData.department === 'dental' ? '歯科' : '皮膚科'}\n希望日時: ${reservationData.selectedDate} ${reservationData.selectedTime}\n\n後日、確認のお電話をさせていただきます。`);
+            alert(`予約を受け付けました。\n\n【予約内容】\nお名前: ${sanitize(reservationData.lastName)} ${sanitize(reservationData.firstName)}様\n診療科: ${reservationData.department === 'dental' ? '歯科' : '皮膚科'}\n希望日時: ${reservationData.selectedDate} ${reservationData.selectedTime}\n\n後日、確認のお電話をさせていただきます。`);
             
             // Reset form
             reservationForm.reset();

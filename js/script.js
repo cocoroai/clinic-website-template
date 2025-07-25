@@ -1,5 +1,34 @@
+// Safe image error handling
+function handleImageError(img) {
+    if (img.classList.contains('logo-image')) {
+        // For logo images, replace with text content safely
+        const parent = img.parentElement;
+        parent.innerHTML = '';
+        parent.textContent = '🌸';
+        parent.style.display = 'flex';
+        parent.style.alignItems = 'center';
+        parent.style.justifyContent = 'center';
+        parent.style.fontSize = '24px';
+    } else {
+        // For other images, use fallback placeholder URL
+        img.src = img.getAttribute('data-fallback') || 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmMGYwIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OTk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPk5vIEltYWdlPC90ZXh0Pjwvc3ZnPg==';
+    }
+}
+
+// Initialize image error handlers
+function initImageErrorHandlers() {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        img.addEventListener('error', function() {
+            handleImageError(this);
+        });
+    });
+}
+
 // Mobile Navigation
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize image error handlers
+    initImageErrorHandlers();
     const hamburger = document.querySelector('.hamburger');
     const nav = document.querySelector('nav');
     
@@ -224,7 +253,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const href = this.getAttribute('href');
             
             // Skip if it's just "#" or modal links
-            if (href === '#' || href.includes('privacy-modal') || href.includes('privacy-policy')) {
+            if (href === '#' || href.includes('privacy-modal')) {
                 return;
             }
             
