@@ -680,20 +680,27 @@ main {
 
 .philosophy-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
     margin-top: 60px;
+    padding: 0 20px;
 }
 
 .philosophy-card {
-    background: linear-gradient(135deg, rgba(248, 187, 217, 0.1), rgba(252, 228, 236, 0.3));
+    background: #FFFFFF;
     border-radius: 20px;
     padding: 40px 30px;
     text-align: center;
-    border: 2px solid rgba(248, 187, 217, 0.3);
+    border: 2px solid rgba(248, 187, 217, 0.5);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 15px rgba(248, 187, 217, 0.2);
+    height: auto;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .philosophy-card:hover {
@@ -1286,11 +1293,16 @@ footer {
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
     }
     
     header .container {
         padding: 12px 16px;
         min-height: 70px;
+        position: relative;
     }
     
     .logo-icon {
@@ -1592,12 +1604,33 @@ footer {
     
     .category-tabs-modern {
         justify-content: stretch;
+        gap: 8px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 0 4px;
     }
     
     .tab-button-modern {
         flex: 1;
         justify-content: center;
         min-width: 0;
+        flex-direction: column;
+        text-align: center;
+        padding: 12px 8px;
+        font-size: 12px;
+        gap: 4px;
+    }
+    
+    .tab-button-modern .tab-icon {
+        font-size: 18px;
+        margin-bottom: 2px;
+    }
+    
+    .tab-button-modern span:not(.tab-icon) {
+        white-space: nowrap;
+        font-size: 11px;
+        line-height: 1.2;
     }
     
     .form-input-group {
@@ -3516,5 +3549,50 @@ html {
     
     .modal-header h2 {
         font-size: 20px;
+    }
+    
+    /* Timeline mobile styles */
+    .timeline-item {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .timeline-item .year {
+        min-width: auto;
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+    
+    .timeline-item .event {
+        font-size: 15px;
+        text-align: center;
+        line-height: 1.5;
+    }
+    
+    /* Doctor profile cards mobile */
+    .doctor-profile-card {
+        margin-bottom: 40px;
+    }
+    
+    .doctor-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .doctor-avatar {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+    }
+    
+    .experience-badge {
+        font-size: 12px;
+        padding: 6px 12px;
     }
 }
