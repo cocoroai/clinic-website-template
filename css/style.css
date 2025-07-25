@@ -188,43 +188,57 @@ nav a.active::after {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    padding: 12px;
-    border-radius: 12px;
+    padding: 8px;
+    border-radius: 8px;
     transition: var(--transition);
     background: rgba(248, 187, 217, 0.1);
     border: 1px solid rgba(248, 187, 217, 0.3);
-    width: 48px;
-    height: 48px;
+    width: 36px;
+    height: 36px;
 }
 
 .hamburger:hover {
     background: rgba(248, 187, 217, 0.2);
     border-color: rgba(248, 187, 217, 0.5);
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .hamburger span {
     display: block;
-    width: 22px;
+    width: 18px;
     height: 2px;
     background-color: var(--primary-dark);
-    margin: 2px 0;
     transition: var(--transition);
     border-radius: 1px;
     transform-origin: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.hamburger span:nth-child(1) {
+    transform: translateX(-50%) translateY(-6px);
+}
+
+.hamburger span:nth-child(2) {
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.hamburger span:nth-child(3) {
+    transform: translateX(-50%) translateY(4px);
 }
 
 .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
 }
 
 .hamburger.active span:nth-child(2) {
     opacity: 0;
-    transform: scale(0);
+    transform: translateX(-50%) translateY(-50%) scale(0);
 }
 
 .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
+    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
 }
 
 /* Main Content */
@@ -1270,7 +1284,7 @@ footer {
 .mt-8 { margin-top: 32px; }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
     .container {
         padding: 0 20px;
     }
@@ -1288,6 +1302,64 @@ footer {
     .form-grid {
         grid-template-columns: 1fr;
     }
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    header .container {
+        position: relative;
+    }
+    
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        border-top: 1px solid var(--border-light);
+        box-shadow: var(--shadow-lg);
+        z-index: 1000;
+    }
+    
+    nav.active {
+        display: block;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        padding: 20px;
+        gap: 0;
+    }
+    
+    nav li {
+        border-bottom: 1px solid var(--border-light);
+    }
+    
+    nav li:last-child {
+        border-bottom: none;
+    }
+    
+    nav a {
+        display: block;
+        padding: 16px 0;
+        font-size: 16px;
+        color: var(--text-dark);
+        border-radius: 0;
+    }
+    
+    .cta-button {
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+        color: white;
+        margin-top: 12px;
+        border-radius: var(--border-radius);
+        padding: 12px 24px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1297,6 +1369,34 @@ footer {
         right: 16px;
         top: 50%;
         transform: translateY(-50%);
+        width: 32px;
+        height: 32px;
+        padding: 6px;
+    }
+    
+    .hamburger span {
+        width: 16px;
+        height: 1.5px;
+    }
+    
+    .hamburger span:nth-child(1) {
+        transform: translateX(-50%) translateY(-4px);
+    }
+
+    .hamburger span:nth-child(2) {
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .hamburger span:nth-child(3) {
+        transform: translateX(-50%) translateY(2.5px);
+    }
+    
+    .hamburger.active span:nth-child(1) {
+        transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: translateX(-50%) translateY(-50%) rotate(-45deg);
     }
     
     header .container {
