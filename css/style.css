@@ -126,15 +126,19 @@ header .container {
 nav ul {
     display: flex;
     list-style: none;
-    gap: 40px;
+    gap: 24px;
     align-items: center;
+}
+
+nav li {
+    white-space: nowrap;
 }
 
 nav a {
     color: var(--text-dark);
     font-weight: 500;
-    font-size: 14px;
-    padding: 8px 16px;
+    font-size: 13px;
+    padding: 8px 12px;
     border-radius: 12px;
     position: relative;
     transition: var(--transition);
@@ -1284,7 +1288,7 @@ footer {
 .mt-8 { margin-top: 32px; }
 
 /* Responsive Design */
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
     .container {
         padding: 0 20px;
     }
