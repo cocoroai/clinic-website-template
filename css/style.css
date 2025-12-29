@@ -727,11 +727,7 @@ main {
     border-color: var(--primary-color);
 }
 
-.philosophy-icon {
-    font-size: 48px;
-    margin-bottom: 20px;
-    display: block;
-}
+/* philosophy-icon moved to bottom of file */
 
 .philosophy-card h3 {
     font-size: 20px;
@@ -1881,10 +1877,7 @@ html {
     box-shadow: var(--shadow-xl);
 }
 
-.philosophy-icon {
-    font-size: 48px;
-    margin-bottom: 24px;
-}
+/* philosophy-icon - see bottom of file */
 
 .philosophy-card h3 {
     font-size: 20px;
@@ -3699,4 +3692,545 @@ html {
         font-size: 12px;
         padding: 6px 12px;
     }
+}
+/* ===== Compact Hero + Quick Actions ===== */
+.hero.hero-compact {
+    min-height: 40vh;
+    padding: 60px 0 40px;
+}
+
+.hero.hero-compact .hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero.hero-compact .hero-content h1 {
+    font-size: clamp(28px, 4vw, 42px);
+    margin-bottom: 16px;
+}
+
+.hero.hero-compact .hero-content p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.hero.hero-compact .hero-badge {
+    margin-bottom: 16px;
+}
+
+.hero.hero-compact .hero-badge svg {
+    stroke: white;
+}
+
+/* Quick Actions Section */
+.quick-actions {
+    padding: 0;
+    margin-top: -30px;
+    position: relative;
+    z-index: 10;
+}
+
+.quick-action-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .quick-action-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+.quick-action-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--background-white);
+    padding: 20px 24px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: var(--transition);
+    border: 1px solid var(--border-light);
+}
+
+.quick-action-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+.quick-action-card.primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    border: none;
+}
+
+.quick-action-card.primary .quick-action-icon {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.quick-action-card.primary .quick-action-icon svg {
+    stroke: white;
+}
+
+.quick-action-card.primary .quick-action-arrow svg {
+    stroke: white;
+}
+
+.quick-action-card.info {
+    cursor: default;
+}
+
+.quick-action-card.info:hover {
+    transform: none;
+}
+
+.quick-action-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: var(--primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.quick-action-icon svg {
+    stroke: var(--primary-dark);
+}
+
+.quick-action-text {
+    flex: 1;
+}
+
+.quick-action-title {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.quick-action-desc {
+    display: block;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.quick-action-arrow {
+    flex-shrink: 0;
+    opacity: 0.5;
+}
+
+.quick-action-card:hover .quick-action-arrow {
+    opacity: 1;
+    transform: translateX(4px);
+}
+
+/* Philosophy icon styles */
+.philosophy-icon svg {
+    stroke: var(--primary-dark);
+}
+
+/* Location icon styles */
+.location-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.location-icon svg {
+    stroke: var(--primary-dark);
+}
+
+/* ===== Compact Cards & Flow Steps ===== */
+
+/* Compact Treatment Flow - 5 columns */
+.flow-steps {
+    display: grid;
+    grid-template-columns: repeat(9, auto);
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-card {
+    background: var(--background-white);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+    min-width: 140px;
+    max-width: 180px;
+}
+
+.step-number {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 0 auto 10px;
+}
+
+.step-content h3 {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-dark);
+}
+
+.step-content p {
+    font-size: 11px;
+    color: var(--text-light);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.flow-arrow {
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+    .flow-steps {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 12px;
+    }
+    .flow-arrow {
+        display: none;
+    }
+    .step-card {
+        max-width: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .flow-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .step-card:last-child {
+        grid-column: span 2;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+}
+
+/* Compact Service Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.card {
+    background: var(--background-white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.card-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: var(--primary-dark);
+}
+
+.card-content h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.card-content > p {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card-list li {
+    font-size: 12px;
+    color: var(--text-light);
+    padding: 4px 0;
+    padding-left: 16px;
+    position: relative;
+}
+
+.card-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* Compact Staff Grid */
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.staff-card {
+    background: var(--background-white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+    transition: var(--transition);
+}
+
+.staff-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.staff-photo {
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+}
+
+.staff-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.staff-info {
+    padding: 16px;
+}
+
+.staff-info h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.staff-role {
+    font-size: 12px;
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+}
+
+.staff-description {
+    font-size: 12px;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* Compact Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.section-header h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.section-header p {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+/* Philosophy Cards Compact */
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+@media (max-width: 768px) {
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.philosophy-card {
+    background: var(--background-white);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+}
+
+.philosophy-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.philosophy-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: white;
+}
+
+.philosophy-card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.philosophy-card p {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Info Cards Compact */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.info-card {
+    background: var(--background-white);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+}
+
+.info-card h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--text-dark);
+}
+
+/* Schedule Table Compact */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 8px 6px;
+    text-align: center;
+}
+
+.schedule-table th {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.schedule-table .available {
+    color: var(--success-color);
+}
+
+.schedule-table .limited {
+    color: var(--warning-color);
+}
+
+.schedule-table .closed {
+    color: var(--text-muted);
+}
+
+/* Page Header Compact */
+.page-header {
+    padding: 100px 0 60px;
+}
+
+.page-header h1 {
+    font-size: clamp(24px, 3vw, 36px);
+}
+
+.page-header p {
+    font-size: 15px;
+}
+
+/* Card Icon - White stroke on pink background */
+.card-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.card-icon svg {
+    width: 24px;
+    height: 24px;
+    stroke: white;
+}
+
+/* Philosophy Icon - White stroke on pink gradient */
+.philosophy-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.philosophy-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: white;
 }
