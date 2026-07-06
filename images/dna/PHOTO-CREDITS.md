@@ -8,7 +8,7 @@
 |---|---|---|---|
 | hero.jpg | モダンな歯科診療室（明るい・チェアと設備） | Benyamin Bohlouli | https://unsplash.com/photos/modern-dental-office-with-chair-and-equipment-e7MJLM5VGjY |
 | dental.jpg | 明るい歯科診療室（白×ティールのチェア） | Ozkan Guner | https://unsplash.com/photos/a-dental-room-with-a-chair-and-a-monitor-Pc8lpKJwecM |
-| derma.jpg | 皮膚科診察（拡大鏡でのスキンチェック） | Bermix Studio | https://unsplash.com/photos/a-close-up-of-a-person-looking-through-a-magnifying-glass-PNdOpC-6q-I |
+| derma.jpg | フェイシャルケア（白いクリームマスク・穏やかな表情） | engin akyurt | https://unsplash.com/photos/g-m8EDc4X6Q |
 | lounge.jpg | クリニック待合スペース（ソファと観葉植物） | Benyamin Bohlouli | https://unsplash.com/photos/blue-couch-beside-green-potted-plant-B_sK_xgzwVA |
 | waiting.jpg | 待合室（チェアとサイン） | Amy Vosters | https://unsplash.com/photos/modern-waiting-room-with-chairs-and-inspirational-sign-pxOQ-P97sA8 |
 | room.jpg | 診療室（デスクとチェア） | Kari Bjorn Photography | https://unsplash.com/photos/a-dental-room-with-a-desk-and-chairs-Fdku_oMrDvk |
