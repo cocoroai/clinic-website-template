@@ -7,7 +7,7 @@
 | ファイル | 内容 | 撮影者 | 出典ページ |
 |---|---|---|---|
 | hero.jpg | モダンな歯科診療室（明るい・チェアと設備） | Benyamin Bohlouli | https://unsplash.com/photos/modern-dental-office-with-chair-and-equipment-e7MJLM5VGjY |
-| dental.jpg | 歯科診療（ミラーと器具のクローズアップ） | Caroline LM | https://unsplash.com/photos/dental-exam-with-mirror-and-tool-8BkF0sTC6Uo |
+| dental.jpg | 明るい歯科診療室（白×ティールのチェア） | Ozkan Guner | https://unsplash.com/photos/a-dental-room-with-a-chair-and-a-monitor-Pc8lpKJwecM |
 | derma.jpg | 皮膚科診察（拡大鏡でのスキンチェック） | Bermix Studio | https://unsplash.com/photos/a-close-up-of-a-person-looking-through-a-magnifying-glass-PNdOpC-6q-I |
 | lounge.jpg | クリニック待合スペース（ソファと観葉植物） | Benyamin Bohlouli | https://unsplash.com/photos/blue-couch-beside-green-potted-plant-B_sK_xgzwVA |
 | waiting.jpg | 待合室（チェアとサイン） | Amy Vosters | https://unsplash.com/photos/modern-waiting-room-with-chairs-and-inspirational-sign-pxOQ-P97sA8 |
